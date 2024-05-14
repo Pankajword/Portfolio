@@ -36,6 +36,52 @@
             </div>
         </div>
     </div>
+    <!------------------Flying text animation --------------->
+    <section>
+        <p class="text5" style="white-space: pre-line; line-height: 2.5;">
+            I am Pankaj Kumar, an aspiring Software Engineer, with a passion for Research and Development,
+            currently exploring the intersection of Art and Technology.
+        </p>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const text5 = document.querySelector('.text5');
+            text5.innerHTML = text5.textContent.replace(/\S/g, "<span>$&</span>");
+    
+            const animation = anime.timeline({
+                targets: '.text5 span',
+                easing: 'easeInOutExpo',
+                loop: true
+            });
+    
+            animation
+                .add({
+                    rotate: function() {
+                        return anime.random(-360, 360)
+                    },
+                    translateX : function(){
+                        return anime.random(-500,500)
+                    },
+                    translateY : function(){
+                        return anime.random(-500,500)
+                    },
+                    duration :5000,
+                    delay : anime.stagger(20),
+                })
+    
+                .add({
+                    rotate :0,
+                    translateX : 0,
+                    translateY: 0,
+                    duration :5000,
+                    delay : anime.stagger(20),
+                });
+        });
+    </script>
+    
+    
     <!-------------------------about-------------------->
     <div id="about">
         <div class="container">
@@ -45,11 +91,13 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About <span>Me</span></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
-                        . Minima eum recusandae eveniet enim id ratione neque?  
-                        porro laborum! Fugit nesciunt earum, suscipit ullam vel iusto
-                         laboriosam saepe. Incidunt beatae mollitia ullam iure magni architecto fuga, 
-                         illo ut aperiam sequi reprehenderit necessitatibus!</p>
+                    <p>Embarking from Chandigarh University as an MCA graduate,
+                         I now stand in Noida, seeking avenues to contribute my expertise.
+                          Proficient in Java, C++, JavaScript, and MySQL, I delve into Spring Boot,
+                           Hibernate, and React.JS, crafting dynamic solutions. With HTML, CSS, and
+                            Bootstrap, I sculpt immersive web experiences. Git and GitHub facilitate
+                             collaborative endeavors. Eager to merge skill with opportunity,
+                              I await the canvas to paint the future of technology.</p>
 
                          <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -59,8 +107,9 @@
                          <div class="tab-contents active-tab" id="skills">
                             <ul>
                                 <li><span>Programming Languages</span><br>Java, SQL, C++, JavaScript<br>Data Structure and Algorithm</li>
-                                <li><span>Framework</span><br>Spring, Collection, React.JS</li>
+                                <li><span>Framework</span><br>Spring Boot, Collection, React.JS, Hibernate</li>
                                 <li><span>Web Technologies</span><br>HTML, CSS, BootStrap</li>
+                                <li><span>VCS(Version Control System)</span><br>Git & Github</li>
                             </ul>
                          </div>
                          <div class="tab-contents" id="education">
@@ -75,7 +124,7 @@
                          <div class="tab-contents" id="certificate">
                             <ul>
                                 <li><span>July 2023</span><br>Full Stack Java developer – Java + JSP + Restful WS + Spring.</li>
-                                <li><span>October 2023</span><br>FrontEnd - Bootcamp (5days)</li>
+                                <li><span>October 2023</span><br>FrontEnd - Bootcamp, To build a Personal website (5days)</li>
                             </ul>
                          </div>
                 </div>
@@ -126,20 +175,16 @@
                 <img src="work-1.png">
                 <div class="layer">
                     <h3>Employee management system</h3>
-                    <p>The Employee Management System is a robust software application developed using Java and Swing framework for graphical interface
-                        and for database we have used my sql and we developed this project on  Intellij IDE. 
-                        In this project we can store the employee details like name ,thier job id, Contact number, and city.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <p>The Employee Management System is a robust software application developed using Java and Swing framework for graphical interface and for the database we have used MySQL. This project was developed in IntelliJ IDE. In this project, we can store employee details like name, their job ID, contact number, and city.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
                 <img src="work-2.png">
                 <div class="layer">
                     <h3>Car rental WebApp</h3>
-                    <p>This project designed so as to be used by car rental company specializing in renting cars to customer 
-                        it is an online system through which customer can view available car to customer.and
-                        customer can view available car, register and book car.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <p>This project is designed to be used by a car rental company specializing in renting cars to customers. It is an online system through which customers can view available cars, register, and book cars.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -147,13 +192,14 @@
                 <div class="layer">
                     <h3>Online Shopping WebApp</h3>
                     <p>Build an online shopping website using HTML for structure, CSS for design, and Node.js for server-side functionality. Combine front-end and back-end technologies to create a seamless, interactive e-commerce platform.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href="#contact" class="btn">for more, Contact Us</a>
+        <a href="#contact" class="btn">For more, Contact Me</a>
     </div>
 </div>
+
 
 <!-----------------Contact------------------------------------>
 
